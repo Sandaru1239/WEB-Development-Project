@@ -1,0 +1,125 @@
+/* ====================================
+   GLOBAL CSS VARIABLES & COLOR SCHEME
+   ==================================== */
+:root {
+    --primary: #ff6f00;           /* Main orange color used for buttons and highlights */
+    --primary-hover: #e65100;     /* Darker orange for hover effects */
+    --bg: #f8f9fa;                /* Light gray background color */
+    --white: #ffffff;             /* Pure white color */
+    --text: #333;                 /* Dark gray text color */
+    --shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow effect for depth */
+}
+
+/* ====================================
+   BASE BODY STYLING
+   ==================================== */
+body { 
+    font-family: 'Segoe UI', sans-serif;  /* Modern, clean font */
+    background: var(--bg);                 /* Light background color */
+    margin: 0;                             /* Remove default margin */
+    color: var(--text);                    /* Dark text color */
+}
+
+
+/* ====================================
+   STICKY HEADER STYLING
+   ==================================== */
+.header {
+    position: sticky; top: 0; z-index: 1000;  /* Stays at top when scrolling */
+    background: var(--white);                 /* White background for contrast */
+    padding: 15px 5%;                         /* Padding for spacing */
+    display: flex; justify-content: space-between; align-items: center; /* Flex layout for horizontal alignment */
+    box-shadow: var(--shadow);                /* Subtle shadow for depth */
+}
+
+/* ====================================
+   LOGO STYLING
+   ==================================== */
+.logo { 
+    color: var(--primary);     /* Orange color for brand */
+    font-size: 1.5rem;         /* Large text */
+    font-weight: bold;         /* Bold text */
+    text-decoration: none;     /* Remove underline */
+}
+
+/* ====================================
+   NAVIGATION BUTTONS
+   ==================================== */
+.nav-btn {
+    text-decoration: none; padding: 8px 20px; border-radius: 20px;  /* Pill-shaped buttons */
+    background: #ffe5d1; color: var(--text); margin-left: 10px;     /* Light orange background with spacing */
+    transition: 0.3s; font-weight: 500;                              /* Smooth animation */
+}
+.nav-btn:hover { 
+    background: #ffd1b3;  /* Slightly darker on hover */
+}
+.nav-btn.active { 
+    background: var(--primary); color: white;  /* Full orange for active button */
+}
+
+
+/* ====================================
+   CONTAINER & LAYOUT
+   ==================================== */
+.container { 
+    padding: 40px 10%;  /* Vertical and horizontal padding */
+}
+.section-title { 
+    text-align: center; margin-bottom: 30px; color: var(--text);  /* Centered title with spacing */
+}
+
+/* ====================================
+   GRID SYSTEM (Responsive Layout)
+   ==================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Auto-fit columns, min 250px each */
+    gap: 30px;                                                       /* Spacing between grid items */
+}
+
+/* ====================================
+   CARD COMPONENT (Food Items)
+   ==================================== */
+.card {
+    background: var(--white); border-radius: 15px; overflow: hidden;  /* White card with rounded corners */
+    box-shadow: var(--shadow); transition: transform 0.3s;            /* Subtle shadow with animation */
+    display: flex; flex-direction: column;                             /* Flex column for vertical layout */
+}
+.card:hover { 
+    transform: translateY(-5px);  /* Lift card up on hover */
+}
+
+/* ====================================
+   CARD IMAGE
+   ==================================== */
+.card-img {
+    width: 100%; height: 200px; object-fit: cover;  /* Full width image with fixed height */
+}
+
+/* ====================================
+   CARD CONTENT AREA
+   ==================================== */
+.card-body { 
+    padding: 20px; flex-grow: 1; display: flex; flex-direction: column;  /* Padding and vertical layout */
+}
+.card-title { 
+    margin: 0 0 10px 0; font-size: 1.2rem;  /* Title styling with spacing below */
+}
+.card-desc { 
+    font-size: 0.9rem; color: #666; margin-bottom: 15px; flex-grow: 1;  /* Small gray text that expands */
+}
+.card-price { 
+    color: var(--primary); font-weight: bold; font-size: 1.1rem;  /* Large orange price text */
+}
+
+/* ====================================
+   ORDER BUTTON
+   ==================================== */
+.btn-order {
+    background: var(--primary); color: white; border: none;  /* Orange button with white text */
+    padding: 10px; width: 100%; border-radius: 8px;          /* Full width with rounded corners */
+    cursor: pointer; font-weight: bold; margin-top: 10px;    /* Pointer cursor and spacing */
+}
+.btn-order:hover { 
+    background: var(--primary-hover);  /* Darker orange on hover */
+}

@@ -1,0 +1,133 @@
+<!-- 
+========================================
+MENU PAGE - menu.ejs
+This page shows all food items filtered by category (Starters, Mains, Desserts)
+Users can click category buttons to switch between different food types
+======================================== 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title shown in browser tab -->
+    <title>Menu | The Curry Leaf</title>
+    <!-- Link to CSS stylesheet -->
+    <link rel='stylesheet' href='/css/style.css'>
+</head>
+<body>
+    <!-- ====================================
+         HEADER / NAVIGATION SECTION
+         ==================================== -->
+    <header class='header'>
+        <!-- Logo that links back to home -->
+        <a href='/' class='logo'>The Curry Leaf</a>
+        <!-- Main navigation -->
+        <nav>
+            <a href='/' class='nav-btn'>Home</a>
+            <!-- This link is marked "active" because we're on the Menu page -->
+            <a href='/menu' class='nav-btn active'>Menu</a>
+        </nav>
+    </header>
+
+    <!-- ====================================
+         MAIN CONTENT AREA
+         ==================================== -->
+    <div class='container'>
+        <!-- ====================================
+             CATEGORY FILTER BUTTONS
+             ==================================== -->
+        <div style='text-align:center; margin-bottom:30px;'>
+            <!-- Starters button - links to /menu?category=Starter -->
+            <!-- Shows "active" styling if current category is Starter -->
+            <a href='/menu?category=Starter' class='nav-btn <%= cat==="Starter"?"active":"" %>'>Starters</a>
+            
+            <!-- Mains button - links to /menu?category=Main -->
+            <!-- Shows "active" styling if current category is Main -->
+            <a href='/menu?category=Main' class='nav-btn <%= cat==="Main"?"active":"" %>'>Mains</a>
+            
+            <!-- Desserts button - links to /menu?category=Dessert -->
+            <!-- Shows "active" styling if current category is Dessert -->
+            <a href='/menu?category=Dessert' class='nav-btn <%= cat==="Dessert"?"active":"" %>'>Desserts</a>
+        </div>
+
+        <!-- ====================================
+             FOOD ITEMS GRID
+             ==================================== -->
+        <div class='grid'>
+            <!-- START: Loop through each food item in the selected category -->
+            <!-- "dishes" and "cat" are sent from the menu controller -->
+            <% dishes.forEach(item => { %>
+                <!-- Display food item as a card -->
+                <div class='card'>
+                    <!-- Food image -->
+                    <img src='/images/<%= item.imageUrl %>' class='card-img' alt='<%= item.name %>'>
+                    
+                    <!-- Card content -->
+                    <div class='card-body'>
+                        <!-- Food name -->
+                        <h3 class='card-title'><%= item.name %></h3>
+                        
+                        <!-- Food description -->
+                        <p class='card-desc'><%= item.description %></p>
+                        
+                        <!-- Food price -->
+                        <p class='card-price'>Rs. <%= item.price %></p>
+                        
+                        <!-- Add to Cart button -->
+                        <button class='btn-order' onclick='addToCart("<%= item.name %>", "<%= item.price %>")'>Add to Cart</button>
+                    </div>
+                </div>
+            <!-- END: Loop -->
+            <% }) %>
+        </div>
+    </div>
+    
+    <!-- Import JavaScript file -->
+    <script src='/js/home.js'></script>
+</body>
+</html>
+
+<!-- 
+========================================
+HOW TO EDIT THIS FILE
+========================================
+
+WANT TO ADD A NEW CATEGORY?
+1. Add new category to food.json items (e.g., "Beverages")
+
+2. Add new button here in menu.ejs:
+   <a href='/menu?category=Beverages' class='nav-btn <%= cat==="Beverages"?"active":"" %>'>Beverages</a>
+
+3. That's it! Users can now filter by this category
+
+WANT TO CHANGE CATEGORY NAMES?
+Example: Change "Starters" to "Appetizers"
+1. Find: <a href='/menu?category=Starter'
+2. Change the display text: 'Appetizers'
+3. Don't change the ?category=Starter part (that must match food.json)
+
+WANT TO SHOW DIFFERENT INFORMATION?
+Example: Add preparation time
+1. Find: <p class='card-desc'><%= item.description %></p>
+2. Add below: <p class='card-time'>Prep time: <%= item.prepTime %> mins</p>
+3. Make sure your food.json has a "prepTime" field
+
+WANT TO CHANGE PAGE TITLE?
+Find: <title>Menu | The Curry Leaf</title>
+Change to: <title>Our Menu | The Curry Leaf</title>
+
+WANT TO ADD ANOTHER FILTER OPTION?
+Example: Filter by price range or spice level
+1. Create new buttons similar to category buttons
+2. Modify homeController.js to add a new filter function
+3. Create a new route if needed
+
+HOW THE FILTER WORKS:
+- When you click "Starters", URL becomes: /menu?category=Starter
+- This triggers the menu() function in homeController.js
+- The function reads "Starter" from req.query.category
+- It filters food.json for items with category === "Starter"
+- Those items are passed to this template as "dishes"
+- The forEach loop displays them as cards
+-->
+

@@ -1,0 +1,115 @@
+<!-- 
+========================================
+HOME PAGE - home.ejs
+This file displays the home page with popular food items
+It uses EJS (embedded JavaScript) to mix HTML with data from the server
+======================================== 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title shown in browser tab and search results -->
+    <title>Home | The Curry Leaf</title>
+    <!-- Link to the CSS stylesheet that styles the entire page -->
+    <link rel='stylesheet' href='/css/style.css'>
+</head>
+<body>
+    <!-- ====================================
+         HEADER / NAVIGATION SECTION
+         ==================================== -->
+    <header class='header'>
+        <!-- Logo - clicking it goes back to home page -->
+        <a href='/' class='logo'>The Curry Leaf</a>
+        <!-- Navigation links -->
+        <nav>
+            <!-- Home link - marked as "active" (special styling) because we're on home page -->
+            <a href='/' class='nav-btn active'>Home</a>
+            <!-- Menu link - goes to /menu when clicked -->
+            <a href='/menu' class='nav-btn'>Menu</a>
+        </nav>
+    </header>
+
+    <!-- ====================================
+         MAIN CONTENT AREA
+         ==================================== -->
+    <div class='container'>
+        <!-- Page title -->
+        <h1 class='section-title'>Popular Favorites</h1>
+        
+        <!-- Grid container that displays food items in a responsive layout -->
+        <div class='grid'>
+            <!-- START: Loop through each popular food item -->
+            <!-- "popular" is the data sent from homeController.js -->
+            <% popular.forEach(item => { %>
+                <!-- Display each food item as a card -->
+                <div class='card'>
+                    <!-- Image of the food item -->
+                    <!-- <%= item.imageUrl %> is replaced with actual image URL from database -->
+                    <img src='/images/<%= item.imageUrl %>' class='card-img' alt='<%= item.name %>'>
+                    
+                    <!-- Card content (title, price, button) -->
+                    <div class='card-body'>
+                        <!-- Food item name -->
+                        <h3 class='card-title'><%= item.name %></h3>
+                        <!-- Food item price -->
+                        <p class='card-price'>Rs. <%= item.price %></p>
+                        <!-- Add to Cart button - calls the addToCart() function from home.js -->
+                        <button class='btn-order' onclick='addToCart("<%= item.name %>", "<%= item.price %>")'>Add to Cart</button>
+                    </div>
+                </div>
+            <!-- END: Loop -->
+            <% }) %>
+        </div>
+    </div>
+    
+    <!-- Import the JavaScript file that handles button clicks -->
+    <script src='/js/home.js'></script>
+</body>
+</html>
+
+<!-- 
+========================================
+HOW TO EDIT THIS FILE
+========================================
+
+WANT TO CHANGE THE LAYOUT?
+- Modify the CSS classes (see public/css/style.css)
+- Change grid columns, colors, sizes there
+
+WANT TO ADD MORE INFORMATION TO EACH CARD?
+Example: Add description
+1. Find this line:
+   <p class='card-price'>Rs. <%= item.price %></p>
+
+2. Add below it:
+   <p class='card-desc'><%= item.description %></p>
+
+3. Make sure your food.json has a "description" field
+
+WANT TO ADD ANOTHER SECTION?
+1. Create a new container div:
+   <div class='container'>
+   <h1 class='section-title'>Your Section Title</h1>
+   <div class='grid'>
+   <!-- Add items here -->
+   </div>
+   </div>
+
+2. Get data from controller (modify homeController.js)
+
+WANT TO CHANGE BUTTON TEXT?
+Find: <button class='btn-order'>Add to Cart</button>
+Change to: <button class='btn-order'>Order Now</button>
+
+WANT TO ADD A NEW NAVIGATION LINK?
+Find: <a href='/menu' class='nav-btn'>Menu</a>
+Add below it: <a href='/about' class='nav-btn'>About</a>
+Then create the about page following the steps in routes/index.js
+
+HOW EJS WORKS:
+- <%= variable %> - shows the value of a variable
+- <% code here %> - runs JavaScript code
+- <% %> combined with forEach - loops through arrays
+-->
+

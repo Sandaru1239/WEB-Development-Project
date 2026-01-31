@@ -1,0 +1,203 @@
+
+[
+  {
+    "name": "Devilled Fish",
+    "description": "Spicy fried fish tossed in a tangy, chili‑garlic sauce.",
+    "price": 6.5,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/devilled-fish.jpg",
+    "popular": true
+  },
+  {
+    "name": "Sri Lankan Chicken Cutlet",
+    "description": "Breaded chicken patty spiced with curry leaves, green chilies and pepper.",
+    "price": 4.75,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/chicken-cutlet.jpg",
+    "popular": true
+  },
+  {
+    "name": "Plantain Chips",
+    "description": "Thinly sliced green plantains deep‑fried to crisp perfection, lightly salted.",
+    "price": 3.2,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/plantain-chips.jpg",
+    "popular": false
+  },
+  {
+    "name": "Sri Lankan Spring Roll",
+    "description": "Golden fried rolls filled with spiced potatoes, carrots and pea sprouts.",
+    "price": 3.8,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/sri-lanka-spring-roll.jpg",
+    "popular": false
+  },
+  {
+    "name": "Ambul Thiyal (Sour Fish Curry)",
+    "description": "Firm fish cooked with goraka (a sour fruit), black pepper, and coconut.",
+    "price": 7.0,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/ambul-thiyal.jpg",
+    "popular": true
+  },
+  {
+    "name": "Egg Hoppers (Biththara Appa)",
+    "description": "Bowl‑shaped fermented rice flour pancakes topped with a runny egg.",
+    "price": 4.3,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/egg-hoppers.jpg",
+    "popular": true
+  },
+  {
+    "name": "String Hoppers (Idiyappam)",
+    "description": "Steamed rice noodle nests served with coconut sambol and curry.",
+    "price": 4.0,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/string-hoppers.jpg",
+    "popular": false
+  },
+  {
+    "name": "Pol Sambol",
+    "description": "Freshly grated coconut mixed with red chili, lime, and Maldive fish.",
+    "price": 2.4,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/pol-sambol.jpg",
+    "popular": true
+  },
+  {
+    "name": "Gotu Kola Sambol",
+    "description": "Chopped Gotu Kola (centella asiatica) tossed with coconut, onions, and lime.",
+    "price": 2.8,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/gotu-kola-sambol.jpg",
+    "popular": false
+  },
+  {
+    "name": "Kottu Roti",
+    "description": "Chopped roti stir‑fried with veggies, eggs and your choice of chicken, beef or shrimp.",
+    "price": 9.5,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/kottu-roti.jpg",
+    "popular": true
+  },
+  {
+    "name": "Plain Hoppers (Appa)",
+    "description": "Crispy‑edged, bowl‑shaped pancakes made from fermented rice flour and coconut milk.",
+    "price": 5.2,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/plain-hoppers.jpg",
+    "popular": true
+  },
+  {
+    "name": "Lamprais",
+    "description": "Dutch‑inspired rice baked in a banana leaf with meatballs, smoked pork, chicken, and a rich gravy.",
+    "price": 12.0,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/lamprais.jpg",
+    "popular": true
+  },
+  {
+    "name": "Sri Lankan Rice & Curry",
+    "description": "Steamed white rice served with a selection of vegetable, lentil, and meat curries.",
+    "price": 8.8,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/rice-and-curry.jpg",
+    "popular": true
+  },
+  {
+    "name": "Chicken Curry",
+    "description": "Tender chicken pieces cooked in a fragrant blend of coconut milk, cinnamon, and cardamom.",
+    "price": 9.0,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/chicken-curry.jpg",
+    "popular": true
+  },
+  {
+    "name": "Mutton Curry",
+    "description": "Slow‑cooked lamb shoulder with Sri Lankan spices, tomatoes and coconut milk.",
+    "price": 10.5,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/mutton-curry.jpg",
+    "popular": false
+  },
+  {
+    "name": "Dhal Curry (Parippu)",
+    "description": "Yellow lentils simmered with mustard seeds, curry leaves and a touch of tamarind.",
+    "price": 4.5,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/dhal-curry.jpg",
+    "popular": false
+  },
+  {
+    "name": "Fish Curry",
+    "description": "Firm white fish cooked in a spicy coconut‑based gravy with fenugreek and tamarind.",
+    "price": 8.7,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/fish-curry.jpg",
+    "popular": false
+  },
+  {
+    "name": "Pepper Crab",
+    "description": "Fresh mud crab sautéed in a rich black pepper and onion sauce.",
+    "price": 11.2,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/pepper-crab.jpg",
+    "popular": true
+  },
+  {
+    "name": "Eggplant Moju",
+    "description": "Slices of fried eggplant in a sweet‑sour vinegar‑spice glaze.",
+    "price": 4.3,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/eggplant-moju.jpg",
+    "popular": false
+  },
+  {
+    "name": "Prawn Sambal",
+    "description": "Spicy sautéed prawns with onions, tomatoes, chilies and coconut flakes.",
+    "price": 9.8,
+    "category": "Main",
+    "imageUrl": "https://example.com/images/prawn-sambal.jpg",
+    "popular": false
+  },
+  {
+    "name": "Watalappan",
+    "description": "Silky caramel custard flavored with coconut milk, jaggery, cardamom and cashews.",
+    "price": 4.9,
+    "category": "Dessert",
+    "imageUrl": "https://example.com/images/watalappan.jpg",
+    "popular": true
+  },
+  {
+    "name": "Aluwa",
+    "description": "Jaggery‑sweetened coconut fudge, often cut into diamond shapes.",
+    "price": 2.9,
+    "category": "Dessert",
+    "imageUrl": "https://example.com/images/aluwas.jpg",
+    "popular": false
+  },
+  {
+    "name": "Kokis",
+    "description": "Crispy, patterned rice flour cookies made in a special iron mould and fried in coconut oil.",
+    "price": 2.2,
+    "category": "Dessert",
+    "imageUrl": "https://example.com/images/kokis.jpg",
+    "popular": true
+  },
+  {
+    "name": "Thala Guli",
+    "description": "Sesame seed balls rolled in coconut, honey and cardamom – a traditional energy bite.",
+    "price": 3.0,
+    "category": "Dessert",
+    "imageUrl": "https://example.com/images/thala-guli.jpg",
+    "popular": false
+  },
+  {
+    "name": "Kalu Dodol",
+    "description": "Rich, dark caramelized sweet made from jaggery, sticky rice flour and coconut milk.",
+    "price": 3.3,
+    "category": "Dessert",
+    "imageUrl": "https://example.com/images/kalu-dodol.jpg",
+    "popular": true
+  }
+]
