@@ -1,8 +1,6 @@
-/* ====================================
-   ROUTE DEFINITIONS FOR THE APP
+/* ROUTE DEFINITIONS FOR THE APP
    This file sets up all the URL paths (routes)
-   and connects them to their controller functions
-   ==================================== */
+   and connects them to their controller functions */
 
 // Import the Express library to create routes
 const express = require('express');
@@ -15,24 +13,21 @@ const router = express.Router();
 // This controller has the logic for what happens when someone visits a page
 const ctrl = require('../controllers/homeController');
 
-/* ====================================
-   ROUTE 1: HOME PAGE
-   ==================================== */
+/* ROUTE 1: HOME PAGE
+   */
 // When someone visits the root URL (example.com/)
 // Call the ctrl.home function to handle it and show the home page
 router.get('/', ctrl.home);
 
-/* ====================================
-   ROUTE 2: MENU PAGE
-   ==================================== */
+//ROUTE 2: MENU PAGE
+   
 // When someone visits /menu (example.com/menu)
 // Call the ctrl.menu function to handle it and show the menu page
 router.get('/menu', ctrl.menu);
 router.get('/about', ctrl.about);
 router.get('/cart',ctrl.cart);
-/* ====================================
-   HOW TO ADD A NEW PAGE/ROUTE
-   ==================================== */
+//HOW TO ADD A NEW PAGE/ROUTE
+  
 /* STEP 1: Add a new function in homeController.js
    -------
    Go to src/controllers/homeController.js and add:
@@ -60,9 +55,7 @@ router.get('/cart',ctrl.cart);
    Add a button or link that points to /about so users can navigate to it
 */
 
-/* ====================================
-   EXPORT THE ROUTER
-   ==================================== */
+// EXPORT THE ROUTE 
 // Share this router with other parts of the app
 // The main app.js file will use this to handle all these routes
 module.exports = router;

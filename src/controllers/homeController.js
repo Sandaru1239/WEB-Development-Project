@@ -1,18 +1,15 @@
-/* ====================================
-   HOME CONTROLLER
+/* HOME CONTROLLER
    Handles routing logic for home and menu pages
-   ==================================== */
+    */
 
 // Import file system module to read files from disk
 const fs = require('fs');
 // Import path module to handle file paths correctly across different operating systems
 const path = require('path');
 
-/* ====================================
-   HELPER FUNCTION: getFood()
+/*HELPER FUNCTION: getFood()
    Reads and parses the food.json data file
-   Returns: Array of food items
-   ==================================== */
+   Returns: Array of food items */
 const getFood = () => {
     // Build the file path to food.json (goes up 2 directories from this file, then into data folder)
     const p = path.join(__dirname, '../../data/food.json');
@@ -20,11 +17,9 @@ const getFood = () => {
     return JSON.parse(fs.readFileSync(p, 'utf8'));
 };
 
-/* ====================================
-   EXPORT: home controller function
+/* EXPORT: home controller function
    Handles requests to the home page
-   Filters foods to show only popular items
-   ==================================== */
+   Filters foods to show only popular items */
 exports.home = (req, res) => {
     // Get all food items and filter to only those marked as popular
     const popular = getFood().filter(i => i.popular);
@@ -32,11 +27,9 @@ exports.home = (req, res) => {
     res.render('home', { popular });
 };
 
-/* ====================================
-   EXPORT: menu controller function
+/* EXPORT: menu controller function
    Handles requests to the menu page
-   Filters foods by category (from URL query parameter)
-   ==================================== */
+   Filters foods by category (from URL query parameter) */
 exports.menu = (req, res) => {
     // Get the category from URL query string, default to 'Main' if not provided
     // Example: /menu?category=Dessert retrieves category from request query
