@@ -1,47 +1,47 @@
 
 [
   {
-    "name": "Devilled Fish",
+    "name": "Chicken Rice",
     "description": "Spicy fried fish tossed in a tangy, chili‑garlic sauce.",
-    "price": 6.5,
+    "price":1200,
     "category": "Starter",
-    "imageUrl": "https://example.com/images/devilled-fish.jpg",
+    "imageUrl": "../public/images/RiceOpt2.jpg",
     "popular": true
   },
   {
-    "name": "Sri Lankan Chicken Cutlet",
+    "name": "Egg Rice  ",
     "description": "Breaded chicken patty spiced with curry leaves, green chilies and pepper.",
-    "price": 4.75,
+    "price": 1000,
     "category": "Starter",
     "imageUrl": "https://example.com/images/chicken-cutlet.jpg",
-    "popular": true
-  },
-  {
-    "name": "Plantain Chips",
-    "description": "Thinly sliced green plantains deep‑fried to crisp perfection, lightly salted.",
-    "price": 3.2,
-    "category": "Starter",
-    "imageUrl": "https://example.com/images/plantain-chips.jpg",
     "popular": false
   },
   {
-    "name": "Sri Lankan Spring Roll",
+    "name": "Mixed Rice",
+    "description": "Thinly sliced green plantains deep‑fried to crisp perfection, lightly salted.",
+    "price": 1500,
+    "category": "Starter",
+    "imageUrl": "https://example.com/images/plantain-chips.jpg",
+    "popular": true
+  },
+  {
+    "name": "Chicken Kottu",
     "description": "Golden fried rolls filled with spiced potatoes, carrots and pea sprouts.",
-    "price": 3.8,
+    "price": 1200,
     "category": "Starter",
     "imageUrl": "https://example.com/images/sri-lanka-spring-roll.jpg",
     "popular": false
   },
   {
-    "name": "Ambul Thiyal (Sour Fish Curry)",
+    "name": "Cheese Kottu",
     "description": "Firm fish cooked with goraka (a sour fruit), black pepper, and coconut.",
-    "price": 7.0,
+    "price": 1500,
     "category": "Starter",
     "imageUrl": "https://example.com/images/ambul-thiyal.jpg",
     "popular": true
   },
   {
-    "name": "Egg Hoppers (Biththara Appa)",
+    "name": " Dolfin Kottu",
     "description": "Bowl‑shaped fermented rice flour pancakes topped with a runny egg.",
     "price": 4.3,
     "category": "Starter",

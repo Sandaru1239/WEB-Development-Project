@@ -46,3 +46,13 @@ exports.menu = (req, res) => {
     // Render the menu.ejs template and pass the filtered dishes and category name
     res.render('menu', { dishes, cat });
 };
+//I started edit from here if anything wrong delete these
+exports.cart = (req, res) => {
+    // Get the category from URL query string, default to 'Main' if not provided
+    // Example: /menu?category=Dessert retrieves category from request query
+    const cat = req.query.category || 'Main';
+    // Filter food items to only those matching the selected category
+    const dishes = getFood().filter(i => i.category === cat);
+    // Render the menu.ejs template and pass the filtered dishes and category name
+    res.render('cart', { dishes, cat });
+};
