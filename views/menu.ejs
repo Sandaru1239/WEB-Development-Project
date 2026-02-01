@@ -8,12 +8,14 @@ Users can click category buttons to switch between different food types
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Title shown in browser tab -->
     <title>Menu | The Curry Leaf</title>
     <!-- Link to CSS stylesheet -->
     <link rel='stylesheet' href='/css/style.css'>
 </head>
+
 <body>
     <!-- ====================================
          HEADER / NAVIGATION SECTION
@@ -26,6 +28,8 @@ Users can click category buttons to switch between different food types
             <a href='/' class='nav-btn'>Home</a>
             <!-- This link is marked "active" because we're on the Menu page -->
             <a href='/menu' class='nav-btn active'>Menu</a>
+            <a href='/cart' class='nav-btn'>Cart</a>
+            <a href='/about' class='nav-btn'>About Us </a>
         </nav>
     </header>
 
@@ -40,11 +44,11 @@ Users can click category buttons to switch between different food types
             <!-- Starters button - links to /menu?category=Starter -->
             <!-- Shows "active" styling if current category is Starter -->
             <a href='/menu?category=Starter' class='nav-btn <%= cat==="Starter"?"active":"" %>'>Starters</a>
-            
+
             <!-- Mains button - links to /menu?category=Main -->
             <!-- Shows "active" styling if current category is Main -->
             <a href='/menu?category=Main' class='nav-btn <%= cat==="Main"?"active":"" %>'>Mains</a>
-            
+
             <!-- Desserts button - links to /menu?category=Dessert -->
             <!-- Shows "active" styling if current category is Dessert -->
             <a href='/menu?category=Dessert' class='nav-btn <%= cat==="Dessert"?"active":"" %>'>Desserts</a>
@@ -56,33 +60,40 @@ Users can click category buttons to switch between different food types
         <div class='grid'>
             <!-- START: Loop through each food item in the selected category -->
             <!-- "dishes" and "cat" are sent from the menu controller -->
-            <% dishes.forEach(item => { %>
+            <% dishes.forEach(item=> { %>
                 <!-- Display food item as a card -->
                 <div class='card'>
                     <!-- Food image -->
                     <img src='/images/<%= item.imageUrl %>' class='card-img' alt='<%= item.name %>'>
-                    
+
                     <!-- Card content -->
                     <div class='card-body'>
                         <!-- Food name -->
-                        <h3 class='card-title'><%= item.name %></h3>
-                        
+                        <h3 class='card-title'>
+                            <%= item.name %>
+                        </h3>
+
                         <!-- Food description -->
-                        <p class='card-desc'><%= item.description %></p>
-                        
+                        <p class='card-desc'>
+                            <%= item.description %>
+                        </p>
+
                         <!-- Food price -->
-                        <p class='card-price'>Rs. <%= item.price %></p>
-                        
+                        <p class='card-price'>Rs. <%= item.price %>
+                        </p>
+
                         <!-- Add to Cart button -->
-                        <button class='btn-order' onclick='addToCart("<%= item.name %>", "<%= item.price %>")'>Add to Cart</button>
+                        <button class='btn-order' onclick='addToCart("<%= item.name %>", "<%= item.price %>")'>Add to
+                            Cart</button>
                     </div>
                 </div>
-            <!-- END: Loop -->
-            <% }) %>
+                <!-- END: Loop -->
+                <% }) %>
         </div>
     </div>
-    
+
     <!-- Import JavaScript file -->
     <script src='/js/home.js'></script>
 </body>
+
 </html>

@@ -28,7 +28,8 @@ router.get('/', ctrl.home);
 // When someone visits /menu (example.com/menu)
 // Call the ctrl.menu function to handle it and show the menu page
 router.get('/menu', ctrl.menu);
-
+router.get('/about', ctrl.about);
+router.get('/cart',ctrl.cart);
 /* ====================================
    HOW TO ADD A NEW PAGE/ROUTE
    ==================================== */
